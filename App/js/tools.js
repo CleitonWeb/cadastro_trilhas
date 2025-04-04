@@ -112,7 +112,7 @@ function validarEmail(email, idCampo) {
 function formatarTelefone(campo) {
   let telefone = campo.value.replace(/\D/g, ''); // Remove caracteres não numéricos
   telefone = telefone.replace(/^(\d{2})(\d)/g, '($1)$2'); // Coloca parênteses em volta dos dois primeiros dígitos
-  telefone = telefone.replace(/(\d{4})(\d)/, '$1-$2'); // Coloca hífen entre o quarto e quinto dígitos
+  telefone = telefone.replace(/(\d{5})(\d)/, '$1-$2'); // Coloca hífen entre o quarto e quinto dígitos
   campo.value = telefone;
 }
 
@@ -121,7 +121,7 @@ function validarTelefone() {
   const telefone = document.getElementById('telefone').value.replace(/\D/g, ''); // Remove caracteres não numéricos
   const mensagemErro = document.getElementById('error_telefone');
 
-  if (telefone.length !== 10) {
+  if (telefone.length !== 11) {
     mensagemErro.textContent = 'Telefone inválido.';
     return false;
   }else{
