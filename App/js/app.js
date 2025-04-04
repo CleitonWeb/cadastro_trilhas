@@ -107,6 +107,10 @@ function carregaDados(){
 
   if(localStorage.length > 0){
     alert('Dados salvos com sucesso!');
+    modal.style.display = "none";
+    modal_login.style.display = "block";
+    
+    document.getElementById('login').value = localStorage.getItem('cpf');
   }  
 }
 

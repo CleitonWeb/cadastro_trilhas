@@ -33,7 +33,7 @@
 		  		  
 		  <div class="input-group">
 			<label for="nome">Nome completo <span class="error">*</span></label>
-			<input type="text" id="nome" class="dados" required>
+			<input type="text" id="nome" class="dados">
 			<span class="error" id="error_nome"></span>
 		  </div>
 		  
@@ -245,6 +245,40 @@
 			<div class="botoes-container">
 				<button type="button" class="cancel" id="btnCancelar">Cancelar</button>
 				<button type="button" onclick="carregaDados()">Confirmar</button>
+			  </div>  
+		  </div>
+	  </div>
+
+
+
+	  <div id="modal_login" class="modal">
+		  <div class="modal-conteudo">
+
+			  <p style="text-align: center;">Crie uma senha para acesso ao sistema.</p>
+
+			<div id="container">
+
+				<div class="input-group">
+					<label for="Login">Login (CPF) <span class="error">*</span></label>
+					<input type="text" id="login" class="tamanho-fixo" disabled>
+					<span class="error" id="error_login"></span>
+				  </div>
+
+				<div class="input-group">
+					<label for="senha">Senha <span class="error">*</span></label>
+					<input type="password" id="senha" class="tamanho-fixo">
+					<span class="error" id="error_senha"></span>
+				  </div>
+				  
+				  <div class="input-group">
+					<label for="confirma_senha">Confirma Senha <span class="error">*</span></label>
+					<input type="password" id="confirma_senha" class="tamanho-fixo">
+					<span class="error" id="error_confirma_senha"></span>
+				  </div>
+			</div>
+
+			<div class="botoes-container">
+				<button type="button" onclick="carregaDados()">Salvar</button>
 			  </div>  
 		  </div>
 	  </div>
