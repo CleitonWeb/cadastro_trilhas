@@ -1,0 +1,325 @@
+
+body{
+  font-family: sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color:#d9d4d4 ;
+
+  background-image: url("img/img-trilhas-inova.png");
+  background-attachment: fixed;
+  background-size: contain;
+  background-position: right;
+  background-repeat: no-repeat;
+
+}
+
+.titulo{
+
+  font-family: 'Poppins';
+  font-style: normal;
+  font-size: 22px;
+  text-align: center;
+  margin-bottom: 10px;
+  
+  }
+
+.container {
+  flex: 1;
+  padding: 30px 15px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px;
+  max-width: 550px;
+  width: 85%;
+  margin: 20px 20px;
+}
+
+.tamanho-fixo {
+  width: 100px;
+}
+
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+label {
+  color: #333;
+  opacity: 0.6;
+  font-size: 13px;
+  display: block;
+  margin-bottom: 5px;  
+}
+
+input, select {
+  width: 95%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+button {
+  background-color: #f26522;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+input[type="file"] {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: flex-end; /* Alinha os botões à direita */
+  gap: 10px; /* Espaçamento entre os botões */
+}
+
+button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.submit {
+  background-color: #f26522;
+  color: #fff;
+}
+
+.cancel {
+  background-color: #eee; /* Cor de fundo mais clara */
+  color: #333; /* Cor de texto mais escura */
+  border: 1px solid #ddd; /* Borda sutil */
+}
+
+
+
+input[type="date"] {
+  width: 30%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  padding-right: 10px; /* Ajusta o padding para o ícone */
+  cursor: pointer;
+}
+
+/* Estilos para o ícone de calendário (opcional) */
+input[type="date"]:-webkit-calendar-picker-indicator {
+  cursor: pointer;
+}
+
+/* ... (seu código CSS anterior) ... */
+
+/* Estilos para o campo de seleção */
+select {
+  width: 40%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;  
+  cursor: pointer;
+}
+
+
+.upload-container {
+  width: 40%;
+  border: 2px dashed #ccc;
+  border-radius: 5px;
+  padding: 15px;
+  text-align: center;
+  cursor: pointer;
+  margin-left: 90px;
+}
+
+.upload-input {
+  display: none;
+}
+
+.upload-icon svg {
+  width: 50px;
+  height: 50px;
+  fill: #ccc;
+}
+
+.upload-text {
+  color: #887474;
+  margin-top: 10px;
+}  
+  
+  
+
+.input-group-inline {
+  display: flex; /* Alinha os elementos em linha */
+  gap: 10px; /* Espaçamento entre os elementos */
+}
+
+.input-group {
+  flex: 1; /* Ocupa a largura disponível igualmente */
+}
+
+
+.espaco {
+  height: 30px; /* Altura do espaço */
+}
+
+.botoes-container {
+  text-align: right;
+}
+
+.subTitulo{
+  font-family: 'Poppins';
+  font-style: normal;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  color: #57534E;
+
+}
+
+.sub{
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+  color:#00acd7
+}
+
+#check {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#check input{
+  width: 15px;
+  height: 15px;
+  margin: auto 0;
+  
+}
+
+#check label {
+  margin: auto 10px;
+  color: #555;
+  transition: 0.5s;
+}
+
+#check input:checked ~ label,
+#check input:valid ~ label {
+  color: #00acd7;
+}
+
+.container label{
+  text-transform: uppercase;
+  font-size: 12px;
+  color: #7c7979;
+}
+
+
+
+
+
+
+
+.trilhas-container {
+  width: 400px;
+  margin: 10px auto;
+}
+
+.trilha-opcao {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  width: 50%;
+}
+
+.trilha-opcao.selecionada {
+  border-color: #007bff; /* Cor da borda quando selecionado */
+  background-color: #f0f8ff; /* Cor de fundo quando selecionado */
+}
+
+.indicador-selecao {
+  width: 17px;
+  height: 17px;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  margin-right: 15px;
+  position: relative;
+}
+
+.trilha-opcao.selecionada .indicador-selecao {
+  border-color: #007bff; /* Cor do indicador quando selecionado */
+}
+
+.trilha-opcao.selecionada .indicador-selecao::before {
+  content: '';
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background-color: #007bff; /* Cor do ponto interno quando selecionado */
+  border-radius: 50%;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.icone {
+  font-size: 16px;
+  margin-right: 15px;
+}
+
+.descricao{
+  font-size: 12px;
+  color: #7c7979;
+}
+
+
+
+
+.modal {
+  display: none; /* Inicialmente escondido */
+  position: fixed; /* Fixado na tela */
+  z-index: 1; /* Sobrepõe outros elementos */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto; /* Permite rolagem se o conteúdo for longo */
+  background-color: rgba(0, 0, 0, 0.6); /* Fundo escurecido */
+}
+
+.modal-conteudo {
+  background-color: #fefefe;
+  margin: 15% auto; /* Centraliza verticalmente */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%; /* Largura do conteúdo */
+  position: relative; /* Para posicionar o botão de fechar */
+}
+
+.fechar {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.fechar:hover,
+.fechar:focus {
+  color: black;
+  text-decoration: none;
+}
+
