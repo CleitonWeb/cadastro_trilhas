@@ -6,8 +6,8 @@
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
-		
-		
+
+				
 		<link rel="stylesheet" type="text/css" href="style.css">	
 		<script src="js/app.js" defer></script>
 		<script src="js/tools.js" defer></script>
@@ -33,37 +33,29 @@
 		  		  
 		  <div class="input-group">
 			<label for="nome">Nome completo <span class="error">*</span></label>
-			<input type="text" id="nome" class="dados">
+			<input type="text" id="nome" class="dados width-470">
 			<span class="error" id="error_nome"></span>
 		  </div>
+
+		  <div class="input-group-inline">
 		  
-		  <div class="input-group">
+		  <div class="input-group  tamanho-fixo">
 			<label for="data">Data de Nascimento <span class="error">*</span></label>
-			<input type="date" id="dtNasc" class="dados" onchange="validarCampo();">
+			<input type="date" id="dtNasc" class="dados" onchange="validarCampo();">			
 			<span class="error" id="error_dtNasc"></span>
 		  </div>
-		  
-		<div class="input-group-inline">
-			<div class="input-group tamanho-fixo">
-			  <label for="cpf">CPF <span class="error">*</span></label>
-			  <input type="text" class="tamanho-fixo dados" id="cpf" name="cpf" maxlength="14" oninput="formatarCPF(this)" placeholder="000.000.000-00">
-			  <span class="error" id="error_cpf"></span>
-		  	</div>
-			
-		  	<div class="input-group">
-			  <label for="telefone">Telefone <span class="error">*</span></label>
-			  <input type="text" id="telefone" name="telefone" class="tamanho-fixo dados" maxlength="14" oninput="formatarTelefone(this)" placeholder="(99)99999-9999">
-			  <span class="error" id="error_telefone"></span>
-			</div>  
+		  <div class="input-group">
+			<label for="cpf">CPF <span class="error">*</span></label>
+			<input type="text" class="tamanho-fixo dados" id="cpf" name="cpf" maxlength="14" oninput="formatarCPF(this)" placeholder="000.000.000-00">
+			<span class="error" id="error_cpf"></span>
+			</div>
+
 		</div>
 
-		  <div class="input-group">
-			<label for="email">E-mail <span class="error">*</span></label>
-			<input type="text" id="email" class="dados"><p>
-			<span class="error" id="error_email"></span>
-		  </div>
+		<div class="input-group-inline">
+			
 
-		  	<div class="input-group">
+			<div class="input-group tamanho-fixo">
 				<label for="sexo">Sexo <span class="error">*</span></label>
 				<select id="sexo" class="dados" onchange="validarCampo();">
 					<option value="">Selecione</option>
@@ -71,28 +63,42 @@
 					<option value="Feminino">Feminino</option>
 				</select>
 				<span class="error" id="error_sexo"></span>
-			</div>			  
+			</div>	
+
+		  	<div class="input-group">
+			  <label for="telefone">Telefone <span class="error">*</span></label>
+			  <input type="text" id="telefone" name="telefone" class="tamanho-fixo dados" maxlength="14" oninput="formatarTelefone(this)" placeholder="(99)99999-9999">
+			  <span class="error" id="error_telefone"></span>
+			</div>  
+
+
+		</div>
+
+		  <div class="input-group">
+			<label for="email">E-mail <span class="error">*</span></label>
+			<input type="text" id="email" class="dados width-470"><p>
+			<span class="error" id="error_email"></span>
+		  </div>
+
+		  
 			
 		  
-			<h5>Documento de Identidade</h5>
+			<label> Documento de Identidade</label>
 		  
 			<div class="upload-container">
 			<input type="file" id="arquivoRg" class="upload-input">
 			<label for="arquivoRg" class="upload-label">
-				<span class="upload-icon">
-				<svg>
-					<path d="M15 15v-4h-5V7l-5 5 5 5z"/>
-					<path d="M19 9h-4v2h4v4h2v-6z"/>
-				</svg>
-				</span>
 				<span class="upload-text">Clique aqui para selecionar o arquivo</span>
 			</label>			
-			</div>
+			</div>			
+			<span id="file-nameRg"></span>
 
-			<div class="espaco"></div>	
+			
+
+			<div class="espaco"><hr></div>	
 
 		  <h4 class="sub">Endereço Residencial</h4>
-				<div class="input-group tamanho-fixo">
+				<div class="input-group width-80">
 			<label for="cep">CEP <span class="error">*</span></label>
 			<input type="text" id="cep" maxlength="9" placeholder="00000-000" class="dados" oninput="formatarCEP(this)">
 			<span class="error" id="error_cep"></span>
@@ -102,12 +108,12 @@
 		  <div class="input-group-inline">
 				<div class="input-group">
 					<label for="rua">Rua <span class="error">*</span></label>
-					<input type="text" id="rua" class="dados">
+					<input type="text" id="rua" class="dados width-150">
 					<span class="error" id="error_rua"></span>
 				</div>
 				<div class="input-group">
 					<label for="numero">Número <span class="error">*</span></label>
-					<input type="text" id="numero" class="tamanho-fixo dados"  oninput="formatarNumero(this)">
+					<input type="text" id="numero" class="dados width-150"  oninput="formatarNumero(this)">
 					<span class="error" id="error_numero"></span>
 				</div>
 		  </div>
@@ -115,13 +121,13 @@
 		  <div class="input-group-inline">		  
 				<div class="input-group">
 			<label for="complemento">Complemento</label>
-			<input type="text" id="complemento" class="dados">
+			<input type="text" id="complemento" class="dados width-150">
 			<span class="error" id="error_complemento"></span>
 		  </div>
 		  
-		  <div class="input-group">
+		  <div class="input-group width-80">
 			<label for="bairro">Bairro <span class="error">*</span></label>
-			<input type="text" id="bairro" class="dados">
+			<input type="text" id="bairro" class="dados width-150">
 			<span class="error" id="error_bairro"></span>
 		  </div>
 		  </div>
@@ -129,7 +135,7 @@
 		  <div class="input-group-inline">		  
 				<div class="input-group">
 			<label for="cidade">Cidade <span class="error">*</span></label>
-			<input type="text" id="cidade" class="dados">
+			<input type="text" id="cidade" class="dados width-150">
 			<span class="error" id="error_cidade"></span>
 		  </div>
 			<div class="input-group">
@@ -140,23 +146,22 @@
 				<span class="error" id="error_estado"></span>
 		    </div>
 		  </div>
+
 		  
-		  <h5>Comprovante de Endereço</h5>
-		  
+		  <label>Comprovante de Endereço</label>
 			<div class="upload-container">
 			<input type="file" id="arquivoComprovaEnd" class="upload-input">
 			<label for="arquivoComprovaEnd" class="upload-label">
-				<span class="upload-icon">
-				<svg>
-					<path d="M15 15v-4h-5V7l-5 5 5 5z"/>
-					<path d="M19 9h-4v2h4v4h2v-6z"/>
-				</svg>
-				</span>
+				<span class="upload-icon"></span>
 				<span class="upload-text">Clique aqui para selecionar o arquivo</span>
 			</label>
 			</div>
+			<span id="file-nameEndereco"></span>
 
-			<div class="espaco"></div>
+
+
+
+			<div class="espaco"><hr></div>
 			<h4 class="sub">Trilhas de aprendizagem</h4>
 			<div class="input-group">
 				<label for="tipo">Selecione uma trilha:</label>
@@ -209,26 +214,23 @@
 					</div>
 				  </div>
 
-
-
 			</div>
 			<div class="espaco"></div>
 
 			<div id="check">
-				<input type="checkbox"  name="accept">
-				<label>Aceitar <a href="termos.html" target="_blank">Termos de Uso</a></label> 
+				<input type="checkbox"  name="accept" id="termos">
+				<label>Aceitar <a href="termos.html" target="_blank">Termos de Uso</a> <span class="error">*</span></label> 
+				<span class="error" id="error_termos"></span>
 			</div>
 
 			<div class="espaco"></div>
 
 		<div class="botoes-container">
 		  <button type="button" class="cancel" id="btnCancelarCadastro">Cancelar</button>
-		  <button type="button" onclick="submeteForm()">Fazer Inscrição</button>
+		  <button type="button" onclick="submeteForm()">Salvar</button>
 		</div>
 
 		</form>
-
-
 	  </div>
 
 	  
@@ -237,14 +239,14 @@
 		  <div class="modal-conteudo">
 			  <span class="fechar">&times;</span>
 
-			  <p style="text-align: center;">Certifique que os dados estejam corretos e confirme!</p>
+			  <p style="text-align: center;">Certifique que os dados estejam corretos e faça sua incrição!</p>
 
 			<div id="dados_preenchidos">
 			</div>
 
 			<div class="botoes-container">
 				<button type="button" class="cancel" id="btnCancelar">Cancelar</button>
-				<button type="button" onclick="carregaDados()">Confirmar</button>
+				<button type="button" onclick="carregaDados()">Fazer Inscrição</button>
 			  </div>  
 		  </div>
 	  </div>
@@ -257,28 +259,29 @@
 			  <p style="text-align: center;">Crie uma senha para acesso ao sistema.</p>
 
 			<div id="container">
-
-				<div class="input-group">
+				<form action="index.html">
+				  <div class="input-group">
 					<label for="Login">Login (CPF) <span class="error">*</span></label>
-					<input type="text" id="login" class="tamanho-fixo" disabled>
+					<input type="text" id="login" class="width-150" disabled>
 					<span class="error" id="error_login"></span>
 				  </div>
 
-				<div class="input-group">
+				  <div class="input-group">
 					<label for="senha">Senha <span class="error">*</span></label>
-					<input type="password" id="senha" class="tamanho-fixo">
+					<input type="password" id="senha" class="width-150">
 					<span class="error" id="error_senha"></span>
 				  </div>
 				  
 				  <div class="input-group">
 					<label for="confirma_senha">Confirma Senha <span class="error">*</span></label>
-					<input type="password" id="confirma_senha" class="tamanho-fixo">
+					<input type="password" id="confirma_senha" class="width-150">
 					<span class="error" id="error_confirma_senha"></span>
 				  </div>
+				</form>
 			</div>
 
 			<div class="botoes-container">
-				<button type="button" onclick="carregaDados()">Salvar</button>
+				<button type="submit">Salvar</button>
 			  </div>  
 		  </div>
 	  </div>

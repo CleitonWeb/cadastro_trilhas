@@ -158,3 +158,41 @@ function validarCEP() {
   }
 
 }
+
+
+function validarTermos() {
+  const termosCheckbox = document.getElementById('termos');
+  const erroTermos = document.getElementById('error_termos');
+
+  if (!termosCheckbox.checked) {
+    erroTermos.textContent = 'Você precisa aceitar os termos e condições.';
+    return false; // Impede o envio do formulário
+  } else {
+    erroTermos.textContent = ''; // Limpa a mensagem de erro
+    return true;
+  }
+}
+
+
+const fileInput = document.getElementById('arquivoRg');
+const fileNameDisplay = document.getElementById('file-nameRg');
+
+fileInput.addEventListener('change', function() {
+  if (this.files && this.files.length > 0) {
+    fileNameDisplay.textContent = this.files[0].name;
+  } else {
+    fileNameDisplay.textContent = 'Nenhum arquivo selecionado';
+  }
+});
+
+
+const fileInput2 = document.getElementById('arquivoComprovaEnd');
+const fileNameDisplay2 = document.getElementById('file-nameEndereco');
+
+fileInput2.addEventListener('change', function() {
+  if (this.files && this.files.length > 0) {
+    fileNameDisplay2.textContent = this.files[0].name;
+  } else {
+    fileNameDisplay2.textContent = 'Nenhum arquivo selecionado';
+  }
+});

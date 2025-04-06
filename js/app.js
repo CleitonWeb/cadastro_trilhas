@@ -35,8 +35,14 @@ function validarCampo() {
           }
         }
     }
-    
-    return retorno;
+
+    // Verificado se todos campos estão preenchidos, verifica se os termos foram aceitos.
+    if(retorno){
+      return validarTermos();
+    }else{
+      return false;
+    }
+
   }
 
 
@@ -48,6 +54,7 @@ function validarCampo() {
     });
   });
 
+  
 // Obtém os elementos
 const modal = document.getElementById("modal");
 const botaoFechar = document.querySelector(".fechar");

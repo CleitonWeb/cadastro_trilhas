@@ -37,7 +37,19 @@ body{
 }
 
 .tamanho-fixo {
-  width: 100px;
+  width: 70%;
+}
+
+.width-80 {
+  width: 80px;
+}
+
+.width-150 {
+  width: 150px;
+}
+
+.width-470 {
+  width: 470px;
 }
 
 
@@ -108,7 +120,7 @@ button {
 
 
 input[type="date"] {
-  width: 30%;
+  width: 70%;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 3px;
@@ -124,7 +136,7 @@ input[type="date"]:-webkit-calendar-picker-indicator {
 
 /* Estilos para o campo de seleção */
 select {
-  width: 40%;
+  width: 70%;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 3px;  
@@ -132,11 +144,15 @@ select {
 }
 
 
+
+
+
+
 .upload-container {
   width: 40%;
   border: 2px dashed #ccc;
   border-radius: 5px;
-  padding: 15px;
+  padding: 5px;
   text-align: center;
   cursor: pointer;
   margin-left: 90px;
@@ -155,9 +171,9 @@ select {
 .upload-text {
   color: #887474;
   margin-top: 10px;
-}  
-  
-  
+}
+
+
 
 .input-group-inline {
   display: flex; /* Alinha os elementos em linha */
@@ -322,3 +338,9 @@ select {
   text-decoration: none;
 }
 
+
+
+hr {
+  margin-top: 10%;
+  border: 0.25px solid #d9d4d4;
+}
