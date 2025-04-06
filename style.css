@@ -121,7 +121,6 @@ input[type="date"]:-webkit-calendar-picker-indicator {
   cursor: pointer;
 }
 
-/* ... (seu código CSS anterior) ... */
 
 /* Estilos para o campo de seleção */
 select {

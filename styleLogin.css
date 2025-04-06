@@ -1,0 +1,16 @@
+body{
+    font-family: sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color:#d9d4d4 ;
+  
+    background-image: url("img/img-trilhas-inova.png");
+    background-attachment: fixed;
+    background-size: contain;
+    background-position: right;
+    background-repeat: no-repeat;
+  
+  }
+  

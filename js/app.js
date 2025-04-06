@@ -126,3 +126,10 @@ trilhas.forEach(trilha => {
     trilha.classList.add('selecionada');
   });
 });
+
+
+
+//Volta para a tela de login
+document.getElementById("btnCancelarCadastro").onclick = function() {
+  window.location="index.html";
+}

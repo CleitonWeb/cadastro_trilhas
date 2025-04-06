@@ -1,289 +1,48 @@
-	<!DOCTYPE html>
-	<html>
-	<head>
-	    <meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
-		
-		
-		<link rel="stylesheet" type="text/css" href="style.css">	
-		<script src="js/app.js" defer></script>
-		<script src="js/tools.js" defer></script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">    
+    <link rel="stylesheet" type="text/css" href="styleLogin.css">
+    
+</head>
+<body class="d-flex align-items-center py-4 bg-body-tertiary">
+    <main class="w-100 m-auto">        
+        <div class="col-md-10 mx-auto col-lg-4">
+            <form class="p-4 p-md-5 border rounded-3 bg-light" action="login.html">
+                <div class="form-floating mb-2">
+                    <input type="cpf" class="form-control" id="inputCpf" placeholder="CPF"/>
+                    <label for="inputCpf">CPF</label>                    
+                </div>
+                    
+                <div class="form-floating mb-2">
+                    <input type="password" class="form-control" id="inputPassword" placeholder="Senha"/>
+                    <label for="inputPassword">Senha</label>
+                </div>
 
-		<title>Formulário de Inscrição</title>
-	  
-	</head>
-	<body>
+                <div class="checkbox mb-3">
+                    <label>
+                        <input type="checkbox" value="lembrar de mim"> Lembrar de mim
+                    </label>
+                </div>
 
-	  <div class="container">
-		<h1 class="titulo">Formulário de Inscrição</h1>
+                <div class="d-flex flex-row mb-3">
+                    <div class="w-50">
+                        <button class="w-50 btn btn-lg btn-success" type="submit">Entrar</button>
+                    </div>
+                    <div class="w-50">          
+                            <a href="cadastro.html" class="h5 link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">
+                                Fazer Cadastro<br>Matrícula</a>
+                    </div>
+                </div>
+                        
+            </form>
 
+        </div>
+    </main>
 
-		<span class="subTitulo">
-		    Preencha os dados abaixo para fazer sua instrição no Programa Trilhas.
-	    </span>
-		<span class="error">(*) Obrigatórios</span>
-		
-		<form enctype="multipart/form-data">
-		<div class="espaco"></div>
-		  <h4 class="sub">Informações do Participante</h4>
-		  
-		  		  
-		  <div class="input-group">
-			<label for="nome">Nome completo <span class="error">*</span></label>
-			<input type="text" id="nome" class="dados">
-			<span class="error" id="error_nome"></span>
-		  </div>
-		  
-		  <div class="input-group">
-			<label for="data">Data de Nascimento <span class="error">*</span></label>
-			<input type="date" id="dtNasc" class="dados" onchange="validarCampo();">
-			<span class="error" id="error_dtNasc"></span>
-		  </div>
-		  
-		<div class="input-group-inline">
-			<div class="input-group tamanho-fixo">
-			  <label for="cpf">CPF <span class="error">*</span></label>
-			  <input type="text" class="tamanho-fixo dados" id="cpf" name="cpf" maxlength="14" oninput="formatarCPF(this)" placeholder="000.000.000-00">
-			  <span class="error" id="error_cpf"></span>
-		  	</div>
-			
-		  	<div class="input-group">
-			  <label for="telefone">Telefone <span class="error">*</span></label>
-			  <input type="text" id="telefone" name="telefone" class="tamanho-fixo dados" maxlength="14" oninput="formatarTelefone(this)" placeholder="(99)99999-9999">
-			  <span class="error" id="error_telefone"></span>
-			</div>  
-		</div>
-
-		  <div class="input-group">
-			<label for="email">E-mail <span class="error">*</span></label>
-			<input type="text" id="email" class="dados"><p>
-			<span class="error" id="error_email"></span>
-		  </div>
-
-		  	<div class="input-group">
-				<label for="sexo">Sexo <span class="error">*</span></label>
-				<select id="sexo" class="dados" onchange="validarCampo();">
-					<option value="">Selecione</option>
-					<option value="Masculino">Masculino</option>
-					<option value="Feminino">Feminino</option>
-				</select>
-				<span class="error" id="error_sexo"></span>
-			</div>			  
-			
-		  
-			<h5>Documento de Identidade</h5>
-		  
-			<div class="upload-container">
-			<input type="file" id="arquivoRg" class="upload-input">
-			<label for="arquivoRg" class="upload-label">
-				<span class="upload-icon">
-				<svg>
-					<path d="M15 15v-4h-5V7l-5 5 5 5z"/>
-					<path d="M19 9h-4v2h4v4h2v-6z"/>
-				</svg>
-				</span>
-				<span class="upload-text">Clique aqui para selecionar o arquivo</span>
-			</label>			
-			</div>
-
-			<div class="espaco"></div>	
-
-		  <h4 class="sub">Endereço Residencial</h4>
-				<div class="input-group tamanho-fixo">
-			<label for="cep">CEP <span class="error">*</span></label>
-			<input type="text" id="cep" maxlength="9" placeholder="00000-000" class="dados" oninput="formatarCEP(this)">
-			<span class="error" id="error_cep"></span>
-		  </div>
-		  
-		  
-		  <div class="input-group-inline">
-				<div class="input-group">
-					<label for="rua">Rua <span class="error">*</span></label>
-					<input type="text" id="rua" class="dados">
-					<span class="error" id="error_rua"></span>
-				</div>
-				<div class="input-group">
-					<label for="numero">Número <span class="error">*</span></label>
-					<input type="text" id="numero" class="tamanho-fixo dados"  oninput="formatarNumero(this)">
-					<span class="error" id="error_numero"></span>
-				</div>
-		  </div>
-		  
-		  <div class="input-group-inline">		  
-				<div class="input-group">
-			<label for="complemento">Complemento</label>
-			<input type="text" id="complemento" class="dados">
-			<span class="error" id="error_complemento"></span>
-		  </div>
-		  
-		  <div class="input-group">
-			<label for="bairro">Bairro <span class="error">*</span></label>
-			<input type="text" id="bairro" class="dados">
-			<span class="error" id="error_bairro"></span>
-		  </div>
-		  </div>
-		  
-		  <div class="input-group-inline">		  
-				<div class="input-group">
-			<label for="cidade">Cidade <span class="error">*</span></label>
-			<input type="text" id="cidade" class="dados">
-			<span class="error" id="error_cidade"></span>
-		  </div>
-			<div class="input-group">
-				<label for="estado">Estado <span class="error">*</span></label>
-				<select id="estado" class="dados"  onchange="validarCampo();">
-					<option value="">Selecione</option>
-				</select>
-				<span class="error" id="error_estado"></span>
-		    </div>
-		  </div>
-		  
-		  <h5>Comprovante de Endereço</h5>
-		  
-			<div class="upload-container">
-			<input type="file" id="arquivoComprovaEnd" class="upload-input">
-			<label for="arquivoComprovaEnd" class="upload-label">
-				<span class="upload-icon">
-				<svg>
-					<path d="M15 15v-4h-5V7l-5 5 5 5z"/>
-					<path d="M19 9h-4v2h4v4h2v-6z"/>
-				</svg>
-				</span>
-				<span class="upload-text">Clique aqui para selecionar o arquivo</span>
-			</label>
-			</div>
-
-			<div class="espaco"></div>
-			<h4 class="sub">Trilhas de aprendizagem</h4>
-			<div class="input-group">
-				<label for="tipo">Selecione uma trilha:</label>
-
-				<div class="trilhas-container">	
-					
-				<div class="input-group-inline">
-					<div class="trilha-opcao selecionada">
-					  <div class="indicador-selecao"></div>
-					  <div class="icone">
-						<span></span>
-					  </div>
-					  <div class="descricao">Programação Front-end</div>
-					</div>
-				  
-					<div class="trilha-opcao">
-					  <div class="indicador-selecao"></div>
-					  <div class="icone">
-						<span></span>
-					  </div>
-					  <div class="descricao">Programação Back-end</div>
-					</div>
-				</div>
-
-				 
-				<div class="input-group-inline">
-					<div class="trilha-opcao">
-					  <div class="indicador-selecao"></div>
-					  <div class="icone">
-						<span></span>
-					  </div>
-					  <div class="descricao">Programação de Jogos</div>
-					</div>
-				  
-					<div class="trilha-opcao">
-					  <div class="indicador-selecao"></div>
-					  <div class="icone">
-						<span></span>
-					  </div>
-					  <div class="descricao">Design e Experiência</div>
-					</div>
-				</div>
-				
-					<div class="trilha-opcao">
-					  <div class="indicador-selecao"></div>
-					  <div class="icone">
-						<span></span>
-					  </div>
-					  <div class="descricao">Ciência de Dados</div>
-					</div>
-				  </div>
-
-
-
-			</div>
-			<div class="espaco"></div>
-
-			<div id="check">
-				<input type="checkbox"  name="accept">
-				<label>Aceitar <a href="termos.html" target="_blank">Termos de Uso</a></label> 
-			</div>
-
-			<div class="espaco"></div>
-
-		<div class="botoes-container">
-		  <button type="button" class="cancel">Cancelar</button>
-		  <button type="button" onclick="submeteForm()">Fazer Inscrição</button>
-		</div>
-
-		</form>
-
-
-	  </div>
-
-	  
-
-	  <div id="modal" class="modal">
-		  <div class="modal-conteudo">
-			  <span class="fechar">&times;</span>
-
-			  <p style="text-align: center;">Certifique que os dados estejam corretos e confirme!</p>
-
-			<div id="dados_preenchidos">
-			</div>
-
-			<div class="botoes-container">
-				<button type="button" class="cancel" id="btnCancelar">Cancelar</button>
-				<button type="button" onclick="carregaDados()">Confirmar</button>
-			  </div>  
-		  </div>
-	  </div>
-
-
-
-	  <div id="modal_login" class="modal">
-		  <div class="modal-conteudo">
-
-			  <p style="text-align: center;">Crie uma senha para acesso ao sistema.</p>
-
-			<div id="container">
-
-				<div class="input-group">
-					<label for="Login">Login (CPF) <span class="error">*</span></label>
-					<input type="text" id="login" class="tamanho-fixo" disabled>
-					<span class="error" id="error_login"></span>
-				  </div>
-
-				<div class="input-group">
-					<label for="senha">Senha <span class="error">*</span></label>
-					<input type="password" id="senha" class="tamanho-fixo">
-					<span class="error" id="error_senha"></span>
-				  </div>
-				  
-				  <div class="input-group">
-					<label for="confirma_senha">Confirma Senha <span class="error">*</span></label>
-					<input type="password" id="confirma_senha" class="tamanho-fixo">
-					<span class="error" id="error_confirma_senha"></span>
-				  </div>
-			</div>
-
-			<div class="botoes-container">
-				<button type="button" onclick="carregaDados()">Salvar</button>
-			  </div>  
-		  </div>
-	  </div>
-
-
-
-	</body>
-	</html>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+</body>
+</html>
