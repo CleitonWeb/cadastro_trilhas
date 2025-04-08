@@ -29,6 +29,8 @@ function validarCampo() {
             retorno = validarTelefone();
           }else if(idCampo === 'cep'){
             retorno = validarCEP();
+          }else if(idCampo === 'senha'){
+            retorno = validarSenhas();
           }else{
             spanErro.innerHTML = '';
             retorno = true;
@@ -36,13 +38,14 @@ function validarCampo() {
         }
     }
 
+    //retorno = validarSenhas();
+
     // Verificado se todos campos estão preenchidos, verifica se os termos foram aceitos.
-    if(retorno){
+    if(retorno){      
       return validarTermos();
     }else{
       return false;
     }
-
   }
 
 
@@ -113,14 +116,10 @@ function carregaDados(){
   }
 
   if(localStorage.length > 0){
-    alert('Dados salvos com sucesso!');
-    modal.style.display = "none";
-    modal_login.style.display = "block";
-    
-    document.getElementById('login').value = localStorage.getItem('cpf');
+    alert('Inscrição efetuada com sucesso!');
+    window.location = "index.html";
   }  
 }
-
 
 
 const trilhas = document.querySelectorAll('.trilha-opcao');

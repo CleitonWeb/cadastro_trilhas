@@ -162,7 +162,7 @@
 
 
 			<div class="espaco"><hr></div>
-			<h4 class="sub">Trilhas de aprendizagem</h4>
+			<h4 class="sub">Trilhas de Aprendizagem</h4>
 			<div class="input-group">
 				<label for="tipo">Selecione uma trilha:</label>
 
@@ -215,15 +215,31 @@
 				  </div>
 
 			</div>
-			<div class="espaco"></div>
 
-			<div id="check">
-				<input type="checkbox"  name="accept" id="termos">
-				<label>Aceitar <a href="termos.html" target="_blank">Termos de Uso</a> <span class="error">*</span></label> 
-				<span class="error" id="error_termos"></span>
+		<div class="espaco"><hr></div>
+
+		<h4 class="sub">Dados de Acesso</h4>
+
+			<div class="input-group">
+				<label for="senha">Senha <span class="error">*</span></label>
+				<input type="password" id="senha" class="width-150 dados">
+				<span class="error" id="error_senha"></span>
+			</div>
+			
+			<div class="input-group">
+				<label for="confirma_senha">Confirma Senha <span class="error">*</span></label>
+				<input type="password" id="confirma_senha" class="width-150">
+				<span class="error" id="error_confirma_senha"></span>
 			</div>
 
-			<div class="espaco"></div>
+		<div class="espaco"><hr></div>
+
+		
+		<div id="check">
+			<input type="checkbox"  name="accept" id="termos" class="dados">
+			<label>Aceitar <a href="termos.html" target="_blank">Termos de Uso</a> <span class="error">*</span></label> 
+			<span class="error" id="error_termos"></span>
+		</div>
 
 		<div class="botoes-container">
 		  <button type="button" class="cancel" id="btnCancelarCadastro">Cancelar</button>
@@ -232,7 +248,6 @@
 
 		</form>
 	  </div>
-
 	  
 
 	  <div id="modal" class="modal">
@@ -250,43 +265,6 @@
 			  </div>  
 		  </div>
 	  </div>
-
-
-
-	  <div id="modal_login" class="modal">
-		  <div class="modal-conteudo">
-
-			  <p style="text-align: center;">Crie uma senha para acesso ao sistema.</p>
-
-			<div id="container">
-				<form action="index.html">
-				  <div class="input-group">
-					<label for="Login">Login (CPF) <span class="error">*</span></label>
-					<input type="text" id="login" class="width-150" disabled>
-					<span class="error" id="error_login"></span>
-				  </div>
-
-				  <div class="input-group">
-					<label for="senha">Senha <span class="error">*</span></label>
-					<input type="password" id="senha" class="width-150">
-					<span class="error" id="error_senha"></span>
-				  </div>
-				  
-				  <div class="input-group">
-					<label for="confirma_senha">Confirma Senha <span class="error">*</span></label>
-					<input type="password" id="confirma_senha" class="width-150">
-					<span class="error" id="error_confirma_senha"></span>
-				  </div>
-				</form>
-			</div>
-
-			<div class="botoes-container">
-				<button type="submit">Salvar</button>
-			  </div>  
-		  </div>
-	  </div>
-
-
 
 	</body>
 	</html>
