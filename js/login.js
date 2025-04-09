@@ -7,8 +7,8 @@ formLogin.onsubmit = function(){
     if (validarCPF()){
         let mensagemErro = document.getElementById(`error_password`);
         let campoSenha = document.getElementById(`inputPassword`);
-        if(campoSenha === ''){            
-            mensagemErro.textContent = 'É obritatório o preenchimento da senha!';
+        if(campoSenha.value === ''){
+            mensagemErro.textContent = 'Preenchimento obrigatório da senha!';
             return false
         }else{
             return true;
