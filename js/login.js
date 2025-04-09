@@ -4,16 +4,32 @@ const formLogin = document.getElementById('formLogin');
 
 
 formLogin.onsubmit = function(){
+    
     if (validarCPF()){
         let mensagemErro = document.getElementById(`error_password`);
         let campoSenha = document.getElementById(`inputPassword`);
+        let campoCpf = document.getElementById(`cpf`).value.replace(/\D/g, '');
+
         if(campoSenha.value === ''){
-            mensagemErro.textContent = 'Preenchimento obrigatório da senha!';
+            mensagemErro.textContent = 'O preenchimento da senha é obrigatório!';
             return false
         }else{
-            return true;
+            mensagemErro = document.getElementById(`error_credenciais`);
+
+            //CPF e senha ficticios. Apenas para teste do sistema...
+            //944.611.770-41 
+            //321Abc!@
+
+            if(campoCpf === '94461177041' && campoSenha.value === '321Abc!@'){
+                return true;
+            }else{
+                mensagemErro.textContent = 'CPF ou Senha errados ou usuário não cadastrado!';
+                return false
+            }
+
+            //return true;
         }
-    }else{
+    }else{        
         return false;
     }
 }

@@ -13,7 +13,8 @@
 <body class="d-flex align-items-center py-4 bg-body-tertiary">
     <main class="w-100 m-auto">        
         <div class="col-md-10 mx-auto col-lg-4">
-            <form class="p-4 p-md-5 border rounded-3 bg-light" action="login.html" id="formLogin">
+            <span class="error" id="error_credenciais"></span>
+            <form class="p-4 p-md-5 border rounded-3 bg-light" action="controle.html" id="formLogin">
                 <div class="form-floating mb-2">
                     <input type="text" class="form-control" id="cpf" name="cpf" maxlength="14" oninput="formatarCPF(this)" placeholder="CPF">                    
                     <label for="inputCpf">CPF</label>
