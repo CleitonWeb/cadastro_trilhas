@@ -4,34 +4,35 @@ const formLogin = document.getElementById('formLogin');
 
 
 formLogin.onsubmit = function(){
-    
-    if (validarCPF()){
-        let mensagemErro = document.getElementById(`error_password`);
-        let campoSenha = document.getElementById(`inputPassword`);
-        let campoCpf = document.getElementById(`cpf`).value.replace(/\D/g, '');
 
-        if(campoSenha.value === ''){
-            mensagemErro.textContent = 'O preenchimento da senha é obrigatório!';
-            return false
-        }else{
-            mensagemErro = document.getElementById(`error_credenciais`);
+  if (validarCPF()){
+      let mensagemErro = document.getElementById(`error_password`);
+      let campoSenha = document.getElementById(`inputPassword`);
+      let campoCpf = document.getElementById(`cpf`).value.replace(/\D/g, '');
 
-            //CPF e senha ficticios. Apenas para teste do sistema...
-            //944.611.770-41 
-            //321Abc!@
+      if(campoSenha.value === ''){
+          mensagemErro.textContent = 'O preenchimento da senha é obrigatório!';
+          return false
+      }
 
-            if(campoCpf === '94461177041' && campoSenha.value === '321Abc!@'){
-                return true;
-            }else{
-                mensagemErro.textContent = 'CPF ou Senha errados ou usuário não cadastrado!';
-                return false
-            }
-
-            //return true;
-        }
-    }else{        
+      mensagemErro = document.getElementById(`error_credenciais`);
+      if(localStorage.length === 0){
+        mensagemErro.textContent = 'CPF não cadastrado!';
         return false;
-    }
+      }else{
+        
+        if(campoCpf === localStorage.getItem('cpf').replace(/\D/g, '') && campoSenha.value === localStorage.getItem('senha')){
+            return true;
+        }else{
+            mensagemErro.textContent = 'CPF ou Senha errada ou usuário não cadastrado!';
+            return false
+        }
+      }
+
+      }else{        
+        return false;
+      }
+
 }
 
 
