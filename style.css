@@ -317,6 +317,36 @@ select {
   background-color: rgba(0, 0, 0, 0.6); /* Fundo escurecido */
 }
 
+.modal_dados_pessoais {
+  display: none; /* Inicialmente escondido */
+  z-index: 1; /* Sobrepõe outros elementos */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto; /* Permite rolagem se o conteúdo for longo */
+}
+
+.modal_senha {
+  display: none; /* Inicialmente escondido */
+  z-index: 1; /* Sobrepõe outros elementos */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto; /* Permite rolagem se o conteúdo for longo */
+}
+.modal_trilha_escolhida {
+  display: none; /* Inicialmente escondido */
+  z-index: 1; /* Sobrepõe outros elementos */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto; /* Permite rolagem se o conteúdo for longo */
+}
+
+
 .modal-conteudo {
   background-color: #fefefe;
   margin: 15% auto; /* Centraliza verticalmente */

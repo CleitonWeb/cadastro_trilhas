@@ -9,8 +9,7 @@
 
             
     <link rel="stylesheet" type="text/css" href="style.css">	
-    <script src="js/app.js" defer></script>
-    <script src="js/tools.js" defer></script>
+    <script src="js/controle.js" defer></script>
 
     <title>Página do Trilheiro</title>
   
@@ -19,9 +18,9 @@
     <div class="container">
         <header class="cabecalho">
             <nav class="cabecalho__menu">
-                <a class="cabecalho__menu__link" href="#" onclick="">Trilha Escolhida</a>
-                <a class="cabecalho__menu__link" href="#">Dados Pessoais</a>
-                <a class="cabecalho__menu__link" href="#">Senha</a>                
+                <a class="cabecalho__menu__link" href="#" id="link_trilha_escolhida">Trilha Escolhida</a>
+                <a class="cabecalho__menu__link" href="#" id="link_dados_pessoais">Dados Pessoais</a>
+                <a class="cabecalho__menu__link" href="#" id="link_senha">Senha</a>  
             </nav>
         </header>
         
@@ -35,36 +34,39 @@
 
 
 
-        <div id="modal_trilha_escolhida" class="modal">
+        <div id="modal_trilha_escolhida" class="modal_trilha_escolhida">
             <div class="modal-conteudo">
   
-                <p style="text-align: center;">Certifique que os dados estejam corretos e faça sua incrição!</p>
+                <p style="text-align: center;">Trilha Escolhida</p>
+                <hr>
   
-              <div id="dados_preenchidos">
+              <div id="dados_trilha_escolhida">
               </div>
   
             </div>
         </div>
 
 
-        <div id="modal_trilha_escolhida" class="modal">
+        <div id="modal_dados_pessoais" class="modal_dados_pessoais">
             <div class="modal-conteudo">
   
-                <p style="text-align: center;">Certifique que os dados estejam corretos e faça sua incrição!</p>
+                <p style="text-align: center;">Dados Cadastrais</p>
+                <hr>
   
-              <div id="dados_preenchidos">
+              <div id="dados_dados_pessoais">
               </div>
   
             </div>
         </div>
 
 
-        <div id="modal_trilha_escolhida" class="modal">
+        <div id="modal_senha" class="modal_senha">
             <div class="modal-conteudo">
   
-                <p style="text-align: center;">Certifique que os dados estejam corretos e faça sua incrição!</p>
+                <p style="text-align: center;">Gerenciar Senha</p>
+                <hr>
   
-              <div id="dados_preenchidos">
+              <div id="dados_senha">
               </div>
   
             </div>
